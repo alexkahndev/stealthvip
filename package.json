@@ -10,12 +10,15 @@
 	},
 	"devDependencies": {
 		"eslint": "9.27.0",
+		"drizzle-kit": "0.31.5",
 		"prettier": "3.5.3",
 		"@types/react": "19.2.0"
 	},
 	"name": "stealthvip",
 	"scripts": {
 		"dev": "bash -c 'trap \"exit 0\" INT; bun run --watch src/backend/server.ts'",
+		"db:studio": "drizzle-kit studio",
+		"db:push": "drizzle-kit push",
 		"format": "prettier --write \"./**/*.{js,ts,css,json,mjs,md,jsx,tsx}\"",
 		"lint": "eslint ./src",
 		"test": "echo \"Error: no test specified\" && exit 1",
